@@ -9,7 +9,7 @@ http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
     <uri>customtags</uri>
     <tag>
         <name>info</name>
-        <tag-class>com.gourianova.binocularviusion.util.UserInfoTag</tag-class>
+        <tag-class>com.gourianova.binocularvision.util.UserInfoTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>user</name>
@@ -19,7 +19,7 @@ http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
     </tag>
     <tag>
         <name>validate</name>
-        <tag-class>com.gourianova.binocularviusion.util.ValidateTag</tag-class>
+        <tag-class>com.gourianova.binocularvision.util.ValidateTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>input</name>
