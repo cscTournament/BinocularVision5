@@ -57,7 +57,7 @@ public class AddUserController {
 @Bean
     CommandLineRunner commandLineRunner(UserRepo userRepo) {
         return args -> {
-            this.userRepo=userRepo;
+            setUserRepo(userRepo);
         };
 
     }
