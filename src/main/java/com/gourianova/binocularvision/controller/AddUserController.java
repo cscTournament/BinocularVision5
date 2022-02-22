@@ -2,6 +2,8 @@ package com.gourianova.binocularvision.controller;
 
 import com.gourianova.binocularvision.model.User;
 import com.gourianova.binocularvision.model.UserRole;
+import com.gourianova.binocularvision.registration.RegistrationController;
+import com.gourianova.binocularvision.registration.RegistrationRequest;
 import com.gourianova.binocularvision.repo.UserRepo;
 
 import org.springframework.boot.CommandLineRunner;
@@ -42,15 +44,26 @@ public class AddUserController {
     @RequestMapping(value = "/views/jsp/addUser", method = RequestMethod.POST)
     public String addUser(@ModelAttribute("SpringWeb") User user,
                           ModelMap model) {
+       /* RegistrationRequest request=new RegistrationRequest(
+                user.getFirst_name(),
+                user.getLast_name(),
+                user.getLogin(),
+                user.getPassword(),
+                user.getBalance());*/
+    // new   RegistrationController.register(request)
+
         model.addAttribute("first_name", user.getFirst_name());
         model.addAttribute("last_name", user.getLast_name());
         model.addAttribute("login", user.getLogin());
         model.addAttribute("password", user.getPassword());
         model.addAttribute("balance", user.getBalance());
         user.setCreate_time(LocalDate.now());
+        //TODO: autoincrement in the database
         user.setId(counter.incrementAndGet());
         user.setRoleId(2);
-               this.userRepo.save(user);
+        getUserRepo().save(user);
+
+             //  this.userRepo.save(user);
                return "/views/jsp/confirm.jsp";
     }
 
