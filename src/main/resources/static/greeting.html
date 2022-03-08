@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Getting Started: Serving Web Content</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Type" content="textIn/html; charset=UTF-8" />
 </head>
 <body>
 <p>Get your greeting <a href="/templates/thymeleaf/sample.html">here</a></p>
 
-<!--/*@thymesVar id="name" type=""*/
-<p th:text="'Hello, ' + ${name} + '!'" />-->
+@thymesVar id="text_in" type="<textarea name="" id="" cols="30" rows="10"></textarea>"
+<p th:text="' greeting, ' + ${text_in} + '!'" />
 </body>
 </html>
